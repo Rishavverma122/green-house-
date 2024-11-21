@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenhouse Gas Emissions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Greenhouse Gas Emissions Overview</h1>
+        <nav>
+            <ul>
+                <li><a href="#india-emissions">India Emissions</a></li>
+                <li><a href="#abundance">Abundance</a></li>
+                <li><a href="#lifetime">Lifetimes</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#properties">CO2 Properties</a></li>
+                <li><a href="#us-emissions">US Emissions</a></li>
+                <li><a href="#emissions-trend">Trends</a></li>
+                <li><a href="#global-impacts">Global Impacts</a></li>
+                <li><a href="#mitigation">Mitigation</a></li>
+                <li><a href="#emission-estimates">Estimates</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="india-emissions" class="content-section">
+            <h2>Greenhouse Gas Emissions in India</h2>
+            <div class="flex-container">
+                <img src="https://www.ghgplatform-india.org/wp-content/uploads/2022/09/GHG-Phase-IV-Infographic-AFOLU-Emissions-Estimates.png" alt="Greenhouse Gas Emissions in India" class="responsive-image" />
+                <div class="text-content">
+                    <p>India is the third-largest emitter of greenhouse gases globally, contributing significantly to climate change. In 2020, India's total greenhouse gas emissions were approximately 3.3 billion metric tons of CO2 equivalent. This large amount is largely attributed to rapid industrialization, urbanization, and increased energy demand as the country continues to develop.</p>
+                    <p>Key contributors to emissions include:</p>
+                    <ul>
+                        <li><strong>Energy Sector:</strong> Responsible for about 74% of total emissions due to reliance on coal and fossil fuels.</li>
+                        <li><strong>Agriculture:</strong> Contributes 18%, primarily through methane emissions from livestock and rice cultivation.</li>
+                        <li><strong>Industrial Processes:</strong> Accounts for 7%, mainly from cement production and manufacturing activities.</li>
+                    </ul>
+                    <p>Despite these challenges, India is committed to reducing its emissions intensity by 33-35% by 2030 from 2005 levels. Additionally, the country aims to increase its share of renewable energy to 50% by 2030, showcasing its commitment to sustainable development and climate action.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="greenhouse-estimates" class="content-section">
+            <h2>Greenhouse Gas Emission Estimates in India</h2>
+            <canvas id="indiaEstimatesChart" class="responsive-image"></canvas>
+            <script>
+                const ctx = document.getElementById('indiaEstimatesChart').getContext('2d');
+                const indiaEstimatesChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Energy', 'Agriculture', 'Industry', 'Waste', 'Transport'],
+                        datasets: [{
+                            label: 'Greenhouse Gas Emissions (Million Metric Tons)',
+                            data: [2400, 600, 200, 100, 500],
+                            backgroundColor: [
+                                '#2e7d32',
+                                '#388e3c',
+                                '#4caf50',
+                                '#81c784',
+                                '#a5d6a7'
+                            ],
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Emissions (Million Metric Tons)'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Sectors'
+                                }
+                            }
+                        }
+                    }
+                });
+            </script>
+            <div class="text-content">
+                <p>India's greenhouse gas emissions estimates highlight significant contributions from various sectors. Here’s a breakdown:</p>
+                <ul>
+                    <li><strong>Energy Sector:</strong> 2400 million metric tons, the largest contributor due to coal and fossil fuel consumption.</li>
+                    <li><strong>Agriculture:</strong> 600 million metric tons, primarily from livestock and rice cultivation.</li>
+                    <li><strong>Industry:</strong> 200 million metric tons, including emissions from manufacturing processes.</li>
+                    <li><strong>Waste Management:</strong> 100 million metric tons, mainly from landfills and waste treatment.</li>
+                    <li><strong>Transport:</strong> 500 million metric tons, driven by vehicle emissions.</li>
+                </ul>
+                <p>Efforts to mitigate these emissions are crucial for India's sustainable future and climate goals.</p>
+            </div>
+        </section>
+
+        <section id="abundance" class="content-section">
+            <h2>How Abundant are Greenhouse Gases in the Atmosphere?</h2>
+            <div class="flex-container">
+                <img src="image.webp" alt="Atmospheric Composition" class="responsive-image" />
+                <div class="text-content">
+                    <p>Greenhouse gases, including carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O), exist in trace amounts but play a crucial role in the Earth's climate system. Understanding their abundance helps us grasp their impact on global warming and climate change.</p>
+                    <p>Current estimates show that:</p>
+                    <ul>
+                        <li><strong>Carbon Dioxide:</strong> Approximately 0.04% (400 ppm), largely from human activities such as burning fossil fuels.</li>
+                        <li><strong>Methane:</strong> Around 0.0002% (1.9 ppm), primarily emitted from agricultural practices, landfills, and natural gas production.</li>
+                        <li><strong>Nitrous Oxide:</strong> Roughly 0.00003% (0.3 ppm), associated with fertilizers and agricultural soil management.</li>
+                    </ul>
+                    <p>Even small concentrations of these gases can significantly affect the greenhouse effect, leading to temperature increases and climate changes that have far-reaching impacts on ecosystems and human society.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lifetime" class="content-section">
+            <h2>How Long Do Greenhouse Gases Stay in the Atmosphere?</h2>
+            <div class="flex-container">
+                <img src="https://www.caro.ie/getattachment/Knowledge-Hub/Science-of-Climate-Change/Greenhouse-Gases/GHG-IPCC-(1).png.aspx?width=1360" alt="Greenhouse Gas Lifetimes" class="responsive-image" />
+                <div class="text-content">
+                    <p>The longevity of various greenhouse gases in the atmosphere varies widely and influences their overall impact on climate change. Understanding these lifetimes is crucial for developing effective climate policies.</p>
+                    <ul>
+                        <li><strong>Carbon Dioxide:</strong> Stays in the atmosphere for hundreds to thousands of years, contributing to long-term warming.</li>
+                        <li><strong>Methane:</strong> Has a shorter atmospheric lifetime of about 12 years, but is significantly more effective at trapping heat in the short term.</li>
+                        <li><strong>Nitrous Oxide:</strong> Remains for approximately 114 years, also contributing to warming over a longer timeframe.</li>
+                    </ul>
+                    <p>Due to their persistence, greenhouse gases released today will continue to affect the climate for generations. This highlights the importance of immediate and sustained action to reduce emissions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="content-section">
+            <h2>Impact of Greenhouse Gases on the Atmosphere</h2>
+            <div class="flex-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Climate_Change_Schematic.svg/1200px-Climate_Change_Schematic.svg.png" alt="Impact of Greenhouse Gases" class="responsive-image" />
+                <div class="text-content">
+                    <p>Greenhouse gases trap heat in the atmosphere, leading to significant climate change effects that are becoming increasingly evident around the world. The impacts of these gases on the climate system are profound and multifaceted.</p>
+                    <ul>
+                        <li><strong>Increased Global Temperatures:</strong> Average global temperatures have risen, resulting in hotter climates and shifting weather patterns.</li>
+                        <li><strong>Melting Ice Caps:</strong> Polar ice is melting at unprecedented rates, which contributes to rising sea levels and threatens coastal communities.</li>
+                        <li><strong>Extreme Weather Patterns:</strong> The frequency and intensity of storms, droughts, and heatwaves have increased, causing widespread damage and displacement.</li>
+                        <li><strong>Ocean Acidification:</strong> Increased CO2 levels lead to more acidic oceans, affecting marine life and ecosystems.</li>
+                    </ul>
+                    <p>Addressing the sources of greenhouse gases is critical for mitigating these impacts and safeguarding the planet's future.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="properties" class="content-section">
+            <h2>Properties of Carbon Dioxide</h2>
+            <div class="flex-container">
+                <img src="https://www.researchgate.net/publication/364433946/figure/fig1/AS:11431281093033292@1667082240353/The-properties-of-carbon-dioxide-25-26-35.png" alt="Properties of Carbon Dioxide" class="responsive-image" />
+                <div class="text-content">
+                    <p>Carbon dioxide is the primary greenhouse gas emitted through human activities, particularly fossil fuel combustion. Understanding its properties is crucial for assessing its role in climate change.</p>
+                    <ul>
+                        <li><strong>Colorless and Odorless:</strong> CO2 is not visible to the naked eye and has no smell, making it difficult to detect without specialized equipment.</li>
+                        <li><strong>Density:</strong> It is denser than air, which can lead to accumulation in low-lying areas, posing health risks.</li>
+                        <li><strong>Heat Absorption:</strong> CO2 effectively absorbs infrared radiation, trapping heat in the atmosphere and contributing to the greenhouse effect.</li>
+                        <li><strong>Solubility:</strong> It dissolves in water, leading to the formation of carbonic acid, which contributes to ocean acidification.</li>
+                    </ul>
+                    <p>These properties make CO2 a critical focus for climate policies aimed at reducing emissions and limiting global warming.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="us-emissions" class="content-section">
+            <h2>U.S. Carbon Dioxide Emissions</h2>
+            <div class="flex-container">
+                <img src="https://www.epa.gov/system/files/images/2024-04/total-ghg-2024.png" alt="U.S. Carbon Dioxide Emissions" class="responsive-image" />
+                <div class="text-content">
+                    <p>The U.S. is one of the largest emitters of CO2, with emissions driven by several key sectors. Understanding the distribution of emissions is essential for effective climate action.</p>
+                    <p>In 2022, U.S. carbon dioxide emissions by economic sector were estimated as follows:</p>
+                    <ul>
+                        <li><strong>Energy Production:</strong> 38%</li>
+                        <li><strong>Transportation:</strong> 29%</li>
+                        <li><strong>Industry:</strong> 22%</li>
+                        <li><strong>Agriculture:</strong> 9%</li>
+                    </ul>
+                    <p>Efforts to transition to renewable energy and enhance energy efficiency are vital for reducing U.S. emissions and meeting international climate commitments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="emissions-trend" class="content-section">
+            <h2>U.S. Carbon Dioxide Emissions Trends (1990-2022)</h2>
+            <canvas id="emissionsTrendChart" class="responsive-image"></canvas>
+            <script>
+                const trendCtx = document.getElementById('emissionsTrendChart').getContext('2d');
+                const emissionsTrendChart = new Chart(trendCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['1990', '2000', '2010', '2020', '2022'],
+                        datasets: [{
+                            label: 'CO2 Emissions (Million Metric Tons)',
+                            data: [5100, 5700, 5300, 5000, 4900],
+                            borderColor: '#2e7d32',
+                            backgroundColor: 'rgba(46, 125, 50, 0.2)',
+                            borderWidth: 2,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Emissions (Million Metric Tons)'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Year'
+                                }
+                            }
+                        }
+                    }
+                });
+            </script>
+        </section>
+
+        <section id="global-impacts" class="content-section">
+            <h2>Global Warming Impacts</h2>
+            <div class="flex-container">
+                <img src="https://static.israel21c.org/www/uploads/2019/01/shutterstock_globalwarming-1520x855.jpg" alt="Global Warming Impacts" class="responsive-image" />
+                <div class="text-content">
+                    <p>The consequences of global warming are far-reaching and have significant implications for natural and human systems. Understanding these impacts is essential for developing effective adaptation and mitigation strategies.</p>
+                    <ul>
+                        <li><strong>Rising Sea Levels:</strong> Sea levels are rising due to melting ice caps and thermal expansion of seawater, threatening coastal cities and habitats.</li>
+                        <li><strong>Disruption of Habitats:</strong> Wildlife is facing habitat loss and changes in food availability, leading to shifts in biodiversity.</li>
+                        <li><strong>Increased Frequency of Natural Disasters:</strong> Extreme weather events such as hurricanes, floods, and wildfires are becoming more frequent and severe.</li>
+                        <li><strong>Threats to Food and Water Security:</strong> Changes in climate patterns affect agriculture, leading to food shortages and increased competition for water resources.</li>
+                    </ul>
+                    <p>These effects necessitate urgent global action to mitigate climate change, protect ecosystems, and ensure the well-being of future generations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mitigation" class="content-section">
+            <h2>Mitigation Strategies</h2>
+            <div class="flex-container">
+                <img src="https://www.fema.gov/sites/default/files/graphics/fema_hazard-mitigation-process_graphic.png" alt="Mitigation Strategies" class="responsive-image" />
+                <div class="text-content">
+                    <p>To combat greenhouse gas emissions, several effective strategies can be implemented across different sectors. These strategies aim not only to reduce emissions but also to promote sustainable practices that benefit the environment and economy.</p>
+                    <ul>
+                        <li><strong>Transitioning to Renewable Energy:</strong> Emphasizing solar, wind, and hydroelectric power to replace fossil fuels in electricity generation.</li>
+                        <li><strong>Improving Energy Efficiency:</strong> Upgrading infrastructure and appliances to reduce energy consumption in residential, commercial, and industrial sectors.</li>
+                        <li><strong>Enhancing Carbon Capture and Storage Technologies:</strong> Developing methods to capture and store CO2 emissions from power plants and industrial sources.</li>
+                        <li><strong>Promoting Sustainable Agricultural Practices:</strong> Implementing techniques that reduce methane and nitrous oxide emissions, such as precision farming and crop rotation.</li>
+                    </ul>
+                    <p>Implementing these strategies is crucial for achieving climate targets, protecting ecosystems, and ensuring a sustainable future for all.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="emission-estimates" class="content-section">
+            <h2>Emission Estimates by Economic Sector</h2>
+            <div class="flex-container">
+                <img src="https://www.epa.gov/system/files/images/2024-04/total-ghg-2024.png" alt="Emission Estimates by Sector" class="responsive-image" />
+                <div class="text-content">
+                    <p>Emission estimates for various economic sectors are critical for understanding the sources of greenhouse gases and prioritizing mitigation efforts. Accurate data collection and analysis enable policymakers to make informed decisions.</p>
+                    <ul>
+                        <li><strong>Energy Production:</strong> Accounts for 38% of total emissions, mainly from coal, oil, and natural gas combustion.</li>
+                        <li><strong>Transportation:</strong> Represents 29% of total emissions, driven by gasoline and diesel use in vehicles.</li>
+                        <li><strong>Industry:</strong> Contributes 22% through manufacturing processes and the use of fossil fuels for energy.</li>
+                        <li><strong>Agriculture:</strong> Represents 9% of total emissions, particularly from livestock and fertilizer use.</li>
+                    </ul>
+                    <p>Addressing emissions in these sectors is key to reducing overall greenhouse gas levels and meeting international climate commitments. Collaborative efforts between governments, industries, and communities will be essential in this endeavor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="methodology" class="content-section">
+            <h2>Methodology</h2>
+            <div class="flex-container">
+                <img src="https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-981-16-2524-4_3/MediaObjects/513787_1_En_3_Fig1_HTML.png" alt="Methodology" class="responsive-image" />
+                <div class="text-content">
+                    <h3>Energy Sector</h3>
+                    <p>The energy sector includes emissions from electricity generation and heating. Key methods for estimation include:</p>
+                    <ul>
+                        <li>Analysis of fuel consumption data, including coal, natural gas, and renewables.</li>
+                        <li>Application of emission factors for different fuel types to calculate total emissions.</li>
+                    </ul>
+                    
+                    <h3>Waste Sector</h3>
+                    <p>The waste sector encompasses emissions from landfills and waste treatment facilities. Estimation methods include:</p>
+                    <ul>
+                        <li>Volume of waste processed annually, taking into account waste composition.</li>
+                        <li>Decomposition rates of organic matter in landfills, which emit methane during anaerobic conditions.</li>
+                    </ul>
+                    
+                    <h3>Industry Sector</h3>
+                    <p>Emissions from manufacturing processes are calculated through:</p>
+                    <ul>
+                        <li>Production data for specific industries (e.g., cement, steel).</li>
+                        <li>Emission factors based on the type of materials and processes used.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Greenhouse Gas Emissions Overview. All rights reserved.</p>
+    </footer>
+</body>
+</html>
